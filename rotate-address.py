@@ -1,8 +1,8 @@
 import secrets
 import time
 
-# Initialize MAC and eSIM ID pools
-mac_pool = {
+# Initialize IMEI and eSIM ID pools
+imei_pool = {
     "A": ["MAC_A1", "MAC_A2", "MAC_A3"],
     "B": ["MAC_B1", "MAC_B2", "MAC_B3"],
     "C": ["MAC_C1", "MAC_C2", "MAC_C3"]
@@ -19,18 +19,18 @@ devices = ["A", "B", "C"]
 
 # Function to change MAC address and eSIM ID
 def change_address_and_esim(device):
-    new_mac = secrets.choice(mac_pool[device])
+    new_imei = secrets.choice(imei_pool[device])
     new_esim = secrets.choice(esim_pool[device])
     
     # Simulate the change process
-    print(f"Changing {device}'s MAC to {new_mac} and eSIM to {new_esim}")
+    print(f"Changing {device}'s MAC to {new_imei} and eSIM to {new_esim}")
     
     # Here you would include the actual code to change the MAC address and eSIM ID
     # This might involve API calls to the device and the network provider
     
     # Simulate a successful change
     time.sleep(1)
-    print(f"{device} reconnected with new MAC and eSIM")
+    print(f"{device} reconnected with new IMEI and eSIM")
 
 # Controller loop
 while True:
