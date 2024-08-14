@@ -23,7 +23,7 @@ def change_address_and_esim(device):
     new_esim = secrets.choice(esim_pool[device])
     
     # Simulate the change process
-    print(f"Changing {device}'s MAC to {new_imei} and eSIM to {new_esim}")
+    print(f"Changing {device}'s IMEI to {new_imei} and eSIM to {new_esim}")
     
     # Here you would include the actual code to change the MAC address and eSIM ID
     # This might involve API calls to the device and the network provider
