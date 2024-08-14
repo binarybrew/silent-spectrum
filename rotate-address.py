@@ -3,21 +3,21 @@ import time
 
 # Initialize IMEI and eSIM ID pools
 imei_pool = {
-    "A": ["MAC_A1", "MAC_A2", "MAC_A3"],
-    "B": ["MAC_B1", "MAC_B2", "MAC_B3"],
-    "C": ["MAC_C1", "MAC_C2", "MAC_C3"]
+    "A": ["356789012345678", "490154203237518", "864253012345675"],
+    "B": ["359876543210987", "353456789012346", "867530912345678"],
+    "C": ["354321098765432", "863457029384756", "356782903847561"]
 }
 
 esim_pool = {
-    "A": ["eSIM_A1", "eSIM_A2", "eSIM_A3"],
-    "B": ["eSIM_B1", "eSIM_B2", "eSIM_B3"],
-    "C": ["eSIM_C1", "eSIM_C2", "eSIM_C3"]
+    "A": ["890112320000003456789", "890141032111185678901", "890123456789012345678"],
+    "B": ["890141012345678901234", "890159876543210987654", "890141032111123456789"],
+    "C": ["890167890123456789012", "890123098765432109876", "890141023456789012345"]
 }
 
 # Initialize devices
 devices = ["A", "B", "C"]
 
-# Function to change MAC address and eSIM ID
+# Function to change IMEI address and eSIM ID
 def change_address_and_esim(device):
     new_imei = secrets.choice(imei_pool[device])
     new_esim = secrets.choice(esim_pool[device])
